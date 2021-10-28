@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"
+    />
+    <title>CLY</title>
+
+    <style>
+      #app div {
+        background-color: skyblue;
+      }
+      .button {
+        display: inline-block;
+
+        position: relative;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1;
+        border-radius: 3px;
+        user-select: none;
+      }
+      .button:active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+        z-index: 2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="button">按钮1</div>
+    </div>
+  </body>
+</html>
